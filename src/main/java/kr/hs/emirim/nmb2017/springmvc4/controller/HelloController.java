@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 	
 	// root 로 들어오는 것들을 처리한다.
+	//	@RequestMapping("/")
+	//	@ResponseBody
+	//	 public String hello() {
+	//	    return "안녕. 스프링!";
+	//	 }
+	
 	@RequestMapping("/")
-	@ResponseBody
 	 public String hello() {
-	    return "안녕. 스프링!";
+	    return "resultPage";
 	 }
 }
