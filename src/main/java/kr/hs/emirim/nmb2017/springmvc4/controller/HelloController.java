@@ -17,8 +17,8 @@ public class HelloController {
 	//	 }
 	
 	@RequestMapping("/")
-	 public String hello(@RequestParam("name") String userName, Model model) {
-		model.addAttribute("message", userName + "님 안녕하세요."); // 주소창/?name=이름 을 넣어줘야 실행 가
+	 public String hello(@RequestParam(defaultValue="주인") String name, Model model) {
+		model.addAttribute("message", name + "님 안녕하세요.");
 		  return "resultPage";
 	 }
 }
